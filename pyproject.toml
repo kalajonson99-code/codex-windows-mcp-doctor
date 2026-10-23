@@ -1,0 +1,29 @@
+[build-system]
+requires = ["setuptools>=69"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "codex-windows-mcp-doctor"
+version = "0.2.1"
+description = "Read-only diagnostics for Codex MCP servers, focused on Windows"
+readme = "README.md"
+requires-python = ">=3.11"
+license = "MIT"
+authors = [{name = "Open source contributors"}]
+keywords = ["codex", "mcp", "windows", "diagnostics", "agent"]
+classifiers = [
+  "Programming Language :: Python :: 3",
+  "Programming Language :: Python :: 3.11",
+  "Programming Language :: Python :: 3.12",
+  "Programming Language :: Python :: 3.13",
+  "Operating System :: Microsoft :: Windows",
+  "Environment :: Console",
+  "Topic :: Software Development :: Testing",
+]
+dependencies = []
+
+[project.scripts]
+codex-mcp-doctor = "codex_mcp_doctor.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
